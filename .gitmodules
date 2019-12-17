@@ -1,0 +1,6 @@
+[submodule "gene_multilayer_network"]
+	path = scripts/gene_multilayer_network
+	url = https://github.com/cirillodavide/gene_multilayer_network
+[submodule "scripts/BiNoM"]
+	path = scripts/BiNoM
+	url = https://github.com/sysbio-curie/BiNoM
