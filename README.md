@@ -6,6 +6,19 @@
 
 Package to ingest/generate and query relational graphs. For the full documentation see the dedicated [website](https://ipc-project-h2020.github.io/ipcrg/).
 
+## dependencies
+
+- Python >=3.6
+- pip >=19.3
+
+## `ipcrg` installation
+
+The package can be easily installed via pip. Just type:
+
+```console
+pip install git+https://github.com/iPC-project-H2020/ipcrg.git
+```
+
 ## `ipcrg` executables
 
 Ingesting entities from the id mapping resources:
