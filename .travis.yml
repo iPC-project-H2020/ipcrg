@@ -1,0 +1,18 @@
+dist: xenial
+language: python
+python:
+  - "3.6"
+
+
+install:
+  # install the egg
+  - pip install -U pip
+  - pip install -e .
+
+
+script:
+  - python -c "import ipcrg"
+  - ipcrg-create-indexes --help
+  - ipcrg-entities-from-resources --help
+  - ipcrg-parse-edge-list --help
+
