@@ -4,7 +4,7 @@
   <img src="./docs/_static/logo.png" alt="ipc-logo" width=500>
 </p>
 
-Package to organize relational graphs in the iPC projects.
+Package to ingest/generate and query relational graphs. For the full documentation see the dedicated [website](https://ipc-project-h2020.github.io/ipcrg/).
 
 ## `ipcrg` executables
 
