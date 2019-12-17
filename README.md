@@ -1,6 +1,6 @@
 # iPC relational graph
 
-![ipc-logo](docs/_build/html/_static/logo.png)
+![ipc-logo](./docs/_static/logo.png)
 
 Package to organize relational graphs in the iPC projects.
 
