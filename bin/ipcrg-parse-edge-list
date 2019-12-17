@@ -1,0 +1,102 @@
+#!/usr/bin/env python
+"""Ingesting relations from an edge list in .csv or .gr format."""
+import json
+import argparse
+from ipcrg.interfaces import INTERFACE_FACTORY
+from ipcrg.entities import ENTITY_FACTORY
+from ipcrg.relations import RELATION_FACTORY
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    '-f',
+    '--filepath',
+    type=str,
+    help='path to the edge list in .csv or .gr format.',
+    required=True
+)
+parser.add_argument(
+    '-u',
+    '--uri',
+    type=str,
+    default='mongodb://localhost:27017/',
+    help='uri connection string. Defaults to "mongodb://localhost:27017/".'
+)
+parser.add_argument(
+    '-i',
+    '--interface',
+    type=str,
+    default='mongo',
+    choices=list(INTERFACE_FACTORY.keys()),
+    help='interface type. Defaults to "mongo".'
+)
+parser.add_argument(
+    '-d',
+    '--database_name',
+    type=str,
+    required=True,
+    help='name of the database.'
+)
+parser.add_argument(
+    '--source_entity',
+    type=str,
+    required=True,
+    choices=list(ENTITY_FACTORY.keys()),
+    help='type of source entities.'
+)
+parser.add_argument(
+    '--target_entity',
+    type=str,
+    default=None,
+    choices=list(ENTITY_FACTORY.keys()),
+    help='type of target entities. If not provided defaults to source_entity.'
+)
+parser.add_argument(
+    '--relation',
+    type=str,
+    required=True,
+    choices=list(RELATION_FACTORY.keys()),
+    help='type of relation.'
+)
+parser.add_argument(
+    '--source_entity_parameters',
+    type=str,
+    default=None,
+    help='optional parameters to build source entities in JSON format.'
+)
+parser.add_argument(
+    '--target_entity_parameters',
+    type=str,
+    default=None,
+    help=(
+        'optional parameters to build source entities in JSON format. '
+        'If not provided defaults to source_entity_parameters.'
+    )
+)
+
+if __name__ == '__main__':
+    # parse arguments
+    args = parser.parse_args()
+    # parse parameters
+    source_entity_parameters = {}
+    if args.source_entity_parameters is not None:
+        source_entity_parameters = json.loads(args.source_entity_parameters)
+    target_entity_parameters = source_entity_parameters
+    if args.target_entity_parameters is not None:
+        target_entity_parameters = json.loads(args.target_entity_parameters)
+    source_entity_class = ENTITY_FACTORY[args.source_entity]
+    target_entity_class = ENTITY_FACTORY[args.source_entity]
+    if args.target_entity is not None:
+        target_entity_class = ENTITY_FACTORY[args.target_entity]
+    # start the interface
+    interface = INTERFACE_FACTORY[args.interface](
+        uri=args.uri, database_name=args.database_name
+    )
+    # create relations
+    interface.from_edge_list_filepath(
+        filepath=args.filepath,
+        relation_class=RELATION_FACTORY[args.relation],
+        source_entity_class=source_entity_class,
+        source_entity_parameters=source_entity_parameters,
+        target_entity_class=target_entity_class,
+        target_entity_parameters=target_entity_parameters
+    )

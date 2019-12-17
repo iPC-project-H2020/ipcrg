@@ -1,0 +1,51 @@
+#!/usr/bin/env python
+"""Ingesting entities from the id mapping resources."""
+import argparse
+from ipcrg.interfaces import INTERFACE_FACTORY
+from ipcrg.entities.gene import Gene
+from ipcrg.entities.protein import Protein
+from ipcrg.io import get_gene_id_mapping_df
+from ipcrg.io import get_protein_id_mapping_df
+
+parser = argparse.ArgumentParser()
+parser.add_argument(
+    '-u',
+    '--uri',
+    type=str,
+    default='mongodb://localhost:27017/',
+    help='uri connection string. Defaults to "mongodb://localhost:27017/".'
+)
+parser.add_argument(
+    '-i',
+    '--interface',
+    type=str,
+    default='mongo',
+    choices=list(INTERFACE_FACTORY.keys()),
+    help='interface type. Defaults to "mongo".'
+)
+parser.add_argument(
+    '-d',
+    '--database_name',
+    type=str,
+    required=True,
+    help='name of the database.'
+)
+
+if __name__ == '__main__':
+    # parse arguments
+    args = parser.parse_args()
+    # start the interface
+    interface = INTERFACE_FACTORY[args.interface](
+        uri=args.uri, database_name=args.database_name
+    )
+    # create entities from id mappings
+    gene_entities = [
+        Gene.id_mapping_row_to_entity(row)
+        for _, row in get_gene_id_mapping_df().iterrows()
+    ]
+    interface.create_entities(gene_entities)
+    protein_entities = [
+        Protein.id_mapping_row_to_entity(row)
+        for _, row in get_protein_id_mapping_df().iterrows()
+    ]
+    interface.create_entities(protein_entities)
