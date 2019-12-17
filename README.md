@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/iPC-project-H2020/ipcrg.svg?branch=master)](https://travis-ci.org/iPC-project-H2020/ipcrg)
+
 # iPC relational graph
 
 <p align="center">
