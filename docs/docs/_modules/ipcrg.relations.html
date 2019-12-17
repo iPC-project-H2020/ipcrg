@@ -1,0 +1,760 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ipcrg.relations package &mdash; ipcrg 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ipcrg" href="modules.html" />
+    <link rel="prev" title="ipcrg.io package" href="ipcrg.io.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ipcrg
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ipcrg.html">ipcrg package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipcrg.entities.html">ipcrg.entities package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipcrg.interfaces.html">ipcrg.interfaces package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipcrg.io.html">ipcrg.io package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ipcrg.relations package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.relations.biogrid">ipcrg.relations.biogrid module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.relations.curie">ipcrg.relations.curie module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.relations.drug">ipcrg.relations.drug module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.relations.mondo">ipcrg.relations.mondo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.relations.ppi">ipcrg.relations.ppi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.relations.reactome">ipcrg.relations.reactome module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.relations.recon3d_metabolite">ipcrg.relations.recon3d_metabolite module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.relations.relation">ipcrg.relations.relation module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.relations">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">ipcrg</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ipcrg</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="ipcrg.html">ipcrg package</a> &raquo;</li>
+        
+      <li>ipcrg.relations package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/_modules/ipcrg.relations.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ipcrg-relations-package">
+<h1>ipcrg.relations package<a class="headerlink" href="#ipcrg-relations-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ipcrg.relations.biogrid">
+<span id="ipcrg-relations-biogrid-module"></span><h2>ipcrg.relations.biogrid module<a class="headerlink" href="#module-ipcrg.relations.biogrid" title="Permalink to this headline">¶</a></h2>
+<p>BioGRID relation.</p>
+<dl class="class">
+<dt id="ipcrg.relations.biogrid.BioGRID">
+<em class="property">class </em><code class="sig-prename descclassname">ipcrg.relations.biogrid.</code><code class="sig-name descname">BioGRID</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">target</em>, <em class="sig-param">relation_subtype=''</em>, <em class="sig-param">weight=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.relations.biogrid.BioGRID" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ipcrg.relations.relation.Relation" title="ipcrg.relations.relation.Relation"><code class="xref py py-class docutils literal notranslate"><span class="pre">ipcrg.relations.relation.Relation</span></code></a></p>
+<p>BioGRID relation.</p>
+<dl class="attribute">
+<dt id="ipcrg.relations.biogrid.BioGRID.source">
+<code class="sig-name descname">source</code><a class="headerlink" href="#ipcrg.relations.biogrid.BioGRID.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>source entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.biogrid.BioGRID.target">
+<code class="sig-name descname">target</code><a class="headerlink" href="#ipcrg.relations.biogrid.BioGRID.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>target entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.biogrid.BioGRID.relation_type">
+<code class="sig-name descname">relation_type</code><a class="headerlink" href="#ipcrg.relations.biogrid.BioGRID.relation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of the relation. Set to mondo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.biogrid.BioGRID.relation_subtype">
+<code class="sig-name descname">relation_subtype</code><a class="headerlink" href="#ipcrg.relations.biogrid.BioGRID.relation_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>relation subtype.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.biogrid.BioGRID.weight">
+<code class="sig-name descname">weight</code><a class="headerlink" href="#ipcrg.relations.biogrid.BioGRID.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>weight of the relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ipcrg.relations.curie">
+<span id="ipcrg-relations-curie-module"></span><h2>ipcrg.relations.curie module<a class="headerlink" href="#module-ipcrg.relations.curie" title="Permalink to this headline">¶</a></h2>
+<p>Curie relation.</p>
+<dl class="class">
+<dt id="ipcrg.relations.curie.Curie">
+<em class="property">class </em><code class="sig-prename descclassname">ipcrg.relations.curie.</code><code class="sig-name descname">Curie</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">target</em>, <em class="sig-param">relation_subtype=''</em>, <em class="sig-param">weight=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.relations.curie.Curie" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ipcrg.relations.relation.Relation" title="ipcrg.relations.relation.Relation"><code class="xref py py-class docutils literal notranslate"><span class="pre">ipcrg.relations.relation.Relation</span></code></a></p>
+<p>Curie relation.</p>
+<dl class="attribute">
+<dt id="ipcrg.relations.curie.Curie.source">
+<code class="sig-name descname">source</code><a class="headerlink" href="#ipcrg.relations.curie.Curie.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>source entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.curie.Curie.target">
+<code class="sig-name descname">target</code><a class="headerlink" href="#ipcrg.relations.curie.Curie.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>target entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.curie.Curie.relation_type">
+<code class="sig-name descname">relation_type</code><a class="headerlink" href="#ipcrg.relations.curie.Curie.relation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of the relation. Set to methylation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.curie.Curie.relation_subtype">
+<code class="sig-name descname">relation_subtype</code><a class="headerlink" href="#ipcrg.relations.curie.Curie.relation_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>relation subtype.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.curie.Curie.weight">
+<code class="sig-name descname">weight</code><a class="headerlink" href="#ipcrg.relations.curie.Curie.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>weight of the relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ipcrg.relations.drug">
+<span id="ipcrg-relations-drug-module"></span><h2>ipcrg.relations.drug module<a class="headerlink" href="#module-ipcrg.relations.drug" title="Permalink to this headline">¶</a></h2>
+<p>Drug relation.</p>
+<dl class="class">
+<dt id="ipcrg.relations.drug.Drug">
+<em class="property">class </em><code class="sig-prename descclassname">ipcrg.relations.drug.</code><code class="sig-name descname">Drug</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">target</em>, <em class="sig-param">relation_subtype=''</em>, <em class="sig-param">weight=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.relations.drug.Drug" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ipcrg.relations.relation.Relation" title="ipcrg.relations.relation.Relation"><code class="xref py py-class docutils literal notranslate"><span class="pre">ipcrg.relations.relation.Relation</span></code></a></p>
+<p>Drug relation.</p>
+<dl class="attribute">
+<dt id="ipcrg.relations.drug.Drug.source">
+<code class="sig-name descname">source</code><a class="headerlink" href="#ipcrg.relations.drug.Drug.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>source entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.drug.Drug.target">
+<code class="sig-name descname">target</code><a class="headerlink" href="#ipcrg.relations.drug.Drug.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>target entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.drug.Drug.relation_type">
+<code class="sig-name descname">relation_type</code><a class="headerlink" href="#ipcrg.relations.drug.Drug.relation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of the relation. Set to drug.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.drug.Drug.relation_subtype">
+<code class="sig-name descname">relation_subtype</code><a class="headerlink" href="#ipcrg.relations.drug.Drug.relation_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>relation subtype.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.drug.Drug.weight">
+<code class="sig-name descname">weight</code><a class="headerlink" href="#ipcrg.relations.drug.Drug.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>weight of the relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ipcrg.relations.mondo">
+<span id="ipcrg-relations-mondo-module"></span><h2>ipcrg.relations.mondo module<a class="headerlink" href="#module-ipcrg.relations.mondo" title="Permalink to this headline">¶</a></h2>
+<p>MONDO relation.</p>
+<dl class="class">
+<dt id="ipcrg.relations.mondo.MONDO">
+<em class="property">class </em><code class="sig-prename descclassname">ipcrg.relations.mondo.</code><code class="sig-name descname">MONDO</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">target</em>, <em class="sig-param">relation_subtype=''</em>, <em class="sig-param">weight=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.relations.mondo.MONDO" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ipcrg.relations.relation.Relation" title="ipcrg.relations.relation.Relation"><code class="xref py py-class docutils literal notranslate"><span class="pre">ipcrg.relations.relation.Relation</span></code></a></p>
+<p>MONDO relation.</p>
+<dl class="attribute">
+<dt id="ipcrg.relations.mondo.MONDO.source">
+<code class="sig-name descname">source</code><a class="headerlink" href="#ipcrg.relations.mondo.MONDO.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>source entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.mondo.MONDO.target">
+<code class="sig-name descname">target</code><a class="headerlink" href="#ipcrg.relations.mondo.MONDO.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>target entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.mondo.MONDO.relation_type">
+<code class="sig-name descname">relation_type</code><a class="headerlink" href="#ipcrg.relations.mondo.MONDO.relation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of the relation. Set to mondo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.mondo.MONDO.relation_subtype">
+<code class="sig-name descname">relation_subtype</code><a class="headerlink" href="#ipcrg.relations.mondo.MONDO.relation_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>relation subtype.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.mondo.MONDO.weight">
+<code class="sig-name descname">weight</code><a class="headerlink" href="#ipcrg.relations.mondo.MONDO.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>weight of the relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ipcrg.relations.ppi">
+<span id="ipcrg-relations-ppi-module"></span><h2>ipcrg.relations.ppi module<a class="headerlink" href="#module-ipcrg.relations.ppi" title="Permalink to this headline">¶</a></h2>
+<p>PPI relation.</p>
+<dl class="class">
+<dt id="ipcrg.relations.ppi.PPI">
+<em class="property">class </em><code class="sig-prename descclassname">ipcrg.relations.ppi.</code><code class="sig-name descname">PPI</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">target</em>, <em class="sig-param">relation_subtype=''</em>, <em class="sig-param">weight=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.relations.ppi.PPI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ipcrg.relations.relation.Relation" title="ipcrg.relations.relation.Relation"><code class="xref py py-class docutils literal notranslate"><span class="pre">ipcrg.relations.relation.Relation</span></code></a></p>
+<p>PPI relation.</p>
+<dl class="attribute">
+<dt id="ipcrg.relations.ppi.PPI.source">
+<code class="sig-name descname">source</code><a class="headerlink" href="#ipcrg.relations.ppi.PPI.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>source entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.ppi.PPI.target">
+<code class="sig-name descname">target</code><a class="headerlink" href="#ipcrg.relations.ppi.PPI.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>target entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.ppi.PPI.relation_type">
+<code class="sig-name descname">relation_type</code><a class="headerlink" href="#ipcrg.relations.ppi.PPI.relation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of the relation. Set to ppi.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.ppi.PPI.relation_subtype">
+<code class="sig-name descname">relation_subtype</code><a class="headerlink" href="#ipcrg.relations.ppi.PPI.relation_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>relation subtype.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.ppi.PPI.weight">
+<code class="sig-name descname">weight</code><a class="headerlink" href="#ipcrg.relations.ppi.PPI.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>weight of the relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ipcrg.relations.reactome">
+<span id="ipcrg-relations-reactome-module"></span><h2>ipcrg.relations.reactome module<a class="headerlink" href="#module-ipcrg.relations.reactome" title="Permalink to this headline">¶</a></h2>
+<p>Reactome relation.</p>
+<dl class="class">
+<dt id="ipcrg.relations.reactome.Reactome">
+<em class="property">class </em><code class="sig-prename descclassname">ipcrg.relations.reactome.</code><code class="sig-name descname">Reactome</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">target</em>, <em class="sig-param">relation_subtype=''</em>, <em class="sig-param">weight=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.relations.reactome.Reactome" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ipcrg.relations.relation.Relation" title="ipcrg.relations.relation.Relation"><code class="xref py py-class docutils literal notranslate"><span class="pre">ipcrg.relations.relation.Relation</span></code></a></p>
+<p>Reactome relation.</p>
+<dl class="attribute">
+<dt id="ipcrg.relations.reactome.Reactome.source">
+<code class="sig-name descname">source</code><a class="headerlink" href="#ipcrg.relations.reactome.Reactome.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>source entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.reactome.Reactome.target">
+<code class="sig-name descname">target</code><a class="headerlink" href="#ipcrg.relations.reactome.Reactome.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>target entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.reactome.Reactome.relation_type">
+<code class="sig-name descname">relation_type</code><a class="headerlink" href="#ipcrg.relations.reactome.Reactome.relation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of the relation. Set to mondo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.reactome.Reactome.relation_subtype">
+<code class="sig-name descname">relation_subtype</code><a class="headerlink" href="#ipcrg.relations.reactome.Reactome.relation_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>relation subtype.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.reactome.Reactome.weight">
+<code class="sig-name descname">weight</code><a class="headerlink" href="#ipcrg.relations.reactome.Reactome.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>weight of the relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ipcrg.relations.recon3d_metabolite">
+<span id="ipcrg-relations-recon3d-metabolite-module"></span><h2>ipcrg.relations.recon3d_metabolite module<a class="headerlink" href="#module-ipcrg.relations.recon3d_metabolite" title="Permalink to this headline">¶</a></h2>
+<p>Recon3DMetabolite relation.</p>
+<dl class="class">
+<dt id="ipcrg.relations.recon3d_metabolite.Recon3DMetabolite">
+<em class="property">class </em><code class="sig-prename descclassname">ipcrg.relations.recon3d_metabolite.</code><code class="sig-name descname">Recon3DMetabolite</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">target</em>, <em class="sig-param">relation_subtype=''</em>, <em class="sig-param">weight=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.relations.recon3d_metabolite.Recon3DMetabolite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ipcrg.relations.relation.Relation" title="ipcrg.relations.relation.Relation"><code class="xref py py-class docutils literal notranslate"><span class="pre">ipcrg.relations.relation.Relation</span></code></a></p>
+<p>Recon3DMetabolite relation.</p>
+<dl class="attribute">
+<dt id="ipcrg.relations.recon3d_metabolite.Recon3DMetabolite.source">
+<code class="sig-name descname">source</code><a class="headerlink" href="#ipcrg.relations.recon3d_metabolite.Recon3DMetabolite.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>source entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.recon3d_metabolite.Recon3DMetabolite.target">
+<code class="sig-name descname">target</code><a class="headerlink" href="#ipcrg.relations.recon3d_metabolite.Recon3DMetabolite.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>target entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.recon3d_metabolite.Recon3DMetabolite.relation_type">
+<code class="sig-name descname">relation_type</code><a class="headerlink" href="#ipcrg.relations.recon3d_metabolite.Recon3DMetabolite.relation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of the relation. Set to mondo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.recon3d_metabolite.Recon3DMetabolite.relation_subtype">
+<code class="sig-name descname">relation_subtype</code><a class="headerlink" href="#ipcrg.relations.recon3d_metabolite.Recon3DMetabolite.relation_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>relation subtype.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.recon3d_metabolite.Recon3DMetabolite.weight">
+<code class="sig-name descname">weight</code><a class="headerlink" href="#ipcrg.relations.recon3d_metabolite.Recon3DMetabolite.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>weight of the relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ipcrg.relations.relation">
+<span id="ipcrg-relations-relation-module"></span><h2>ipcrg.relations.relation module<a class="headerlink" href="#module-ipcrg.relations.relation" title="Permalink to this headline">¶</a></h2>
+<p>Representation of a relation.</p>
+<dl class="class">
+<dt id="ipcrg.relations.relation.Relation">
+<em class="property">class </em><code class="sig-prename descclassname">ipcrg.relations.relation.</code><code class="sig-name descname">Relation</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">target</em>, <em class="sig-param">relation_type</em>, <em class="sig-param">relation_subtype</em>, <em class="sig-param">weight=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.relations.relation.Relation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="ipcrg.html#ipcrg.knowledge_unit.KnowledgeUnit" title="ipcrg.knowledge_unit.KnowledgeUnit"><code class="xref py py-class docutils literal notranslate"><span class="pre">ipcrg.knowledge_unit.KnowledgeUnit</span></code></a></p>
+<p>Basic relation.</p>
+<dl class="attribute">
+<dt id="ipcrg.relations.relation.Relation.source">
+<code class="sig-name descname">source</code><a class="headerlink" href="#ipcrg.relations.relation.Relation.source" title="Permalink to this definition">¶</a></dt>
+<dd><p>source entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.relation.Relation.target">
+<code class="sig-name descname">target</code><a class="headerlink" href="#ipcrg.relations.relation.Relation.target" title="Permalink to this definition">¶</a></dt>
+<dd><p>target entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity">ipcrg.entities.entity.Entity</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.relation.Relation.relation_type">
+<code class="sig-name descname">relation_type</code><a class="headerlink" href="#ipcrg.relations.relation.Relation.relation_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>type of the relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.relation.Relation.relation_subtype">
+<code class="sig-name descname">relation_subtype</code><a class="headerlink" href="#ipcrg.relations.relation.Relation.relation_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>relation subtype.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.relations.relation.Relation.weight">
+<code class="sig-name descname">weight</code><a class="headerlink" href="#ipcrg.relations.relation.Relation.weight" title="Permalink to this definition">¶</a></dt>
+<dd><p>weight of the relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>float</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ipcrg.relations">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ipcrg.relations" title="Permalink to this headline">¶</a></h2>
+<p>Initialize relation module.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modules.html" class="btn btn-neutral float-right" title="ipcrg" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ipcrg.io.html" class="btn btn-neutral float-left" title="ipcrg.io package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, iPC team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

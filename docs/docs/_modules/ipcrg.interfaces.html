@@ -1,0 +1,895 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ipcrg.interfaces package &mdash; ipcrg 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ipcrg.io package" href="ipcrg.io.html" />
+    <link rel="prev" title="ipcrg.entities package" href="ipcrg.entities.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> ipcrg
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="ipcrg.html">ipcrg package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipcrg.entities.html">ipcrg.entities package</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">ipcrg.interfaces package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.interfaces.interface">ipcrg.interfaces.interface module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.interfaces.mongo">ipcrg.interfaces.mongo module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-ipcrg.interfaces">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ipcrg.io.html">ipcrg.io package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipcrg.relations.html">ipcrg.relations package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">ipcrg</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">ipcrg</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="ipcrg.html">ipcrg package</a> &raquo;</li>
+        
+      <li>ipcrg.interfaces package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/_modules/ipcrg.interfaces.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ipcrg-interfaces-package">
+<h1>ipcrg.interfaces package<a class="headerlink" href="#ipcrg-interfaces-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-ipcrg.interfaces.interface">
+<span id="ipcrg-interfaces-interface-module"></span><h2>ipcrg.interfaces.interface module<a class="headerlink" href="#module-ipcrg.interfaces.interface" title="Permalink to this headline">¶</a></h2>
+<p>Abstract interface definition.</p>
+<dl class="class">
+<dt id="ipcrg.interfaces.interface.Interface">
+<em class="property">class </em><code class="sig-prename descclassname">ipcrg.interfaces.interface.</code><code class="sig-name descname">Interface</code><span class="sig-paren">(</span><em class="sig-param">uri</em>, <em class="sig-param">database_name</em>, <em class="sig-param">**parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Abstract definition of a db interface.</p>
+<dl class="attribute">
+<dt id="ipcrg.interfaces.interface.Interface.uri">
+<code class="sig-name descname">uri</code><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.uri" title="Permalink to this definition">¶</a></dt>
+<dd><p>uri connection string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.interfaces.interface.Interface.database_name">
+<code class="sig-name descname">database_name</code><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.database_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the database.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.interfaces.interface.Interface.parameters">
+<code class="sig-name descname">parameters</code><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>parameters for the interface.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.create_entities">
+<code class="sig-name descname">create_entities</code><span class="sig-paren">(</span><em class="sig-param">entities</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.create_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entities</strong> (<em>typing.List</em><em>[</em><em>dict</em><em>]</em>) – list of entity representations.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.create_entity">
+<code class="sig-name descname">create_entity</code><span class="sig-paren">(</span><em class="sig-param">entity</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.create_entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entity</strong> (<em>dict</em>) – entity representation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.create_indexes">
+<code class="sig-name descname">create_indexes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.create_indexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create search indexes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.create_relation">
+<code class="sig-name descname">create_relation</code><span class="sig-paren">(</span><em class="sig-param">relation</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.create_relation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relation</strong> (<em>dict</em>) – relation representation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.create_relations">
+<code class="sig-name descname">create_relations</code><span class="sig-paren">(</span><em class="sig-param">relations</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.create_relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relations</strong> (<em>typing.List</em><em>[</em><em>dict</em><em>]</em>) – list of relation representations.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.delete_all_entities">
+<code class="sig-name descname">delete_all_entities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.delete_all_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all entities.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.delete_all_relations">
+<code class="sig-name descname">delete_all_relations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.delete_all_relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all relations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.from_edge_list_filepath">
+<code class="sig-name descname">from_edge_list_filepath</code><span class="sig-paren">(</span><em class="sig-param">filepath</em>, <em class="sig-param">relation_class</em>, <em class="sig-param">source_entity_class</em>, <em class="sig-param">source_entity_parameters={}</em>, <em class="sig-param">target_entity_class=None</em>, <em class="sig-param">target_entity_parameters=None</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.from_edge_list_filepath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Insert entities and relations from filepath.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filepath</strong> (<em>str</em>) – path to a file.</p></li>
+<li><p><strong>relation_class</strong> (<em>type</em><em>(</em><a class="reference internal" href="ipcrg.relations.html#ipcrg.relations.relation.Relation" title="ipcrg.relations.relation.Relation"><em>ipcrg.relations.relation.Relation</em></a><em>)</em>) – class type for relation.</p></li>
+<li><p><strong>source_entity_class</strong> (<em>type</em><em>(</em><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity"><em>ipcrg.entities.entity.Entity</em></a><em>)</em>) – class type for source entity.</p></li>
+<li><p><strong>source_entity_parameters</strong> (<em>dict</em>) – parameters for the
+source_entity_class.create_entities method. Defaults to {}.</p></li>
+<li><p><strong>target_entity_class</strong> (<em>type</em><em>(</em><a class="reference internal" href="ipcrg.entities.html#ipcrg.entities.entity.Entity" title="ipcrg.entities.entity.Entity"><em>ipcrg.entities.entity.Entity</em></a><em>)</em>) – class type for target entity. Defaults to None, a.k.a same
+as source_entity_class.</p></li>
+<li><p><strong>target_entity_parameters</strong> (<em>dict</em>) – parameters for the
+target_entity_class.create_entities method. Defaults to None,
+a.k.a. same as source_entity_parameters.</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – key-value arguments for pd.read_csv.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_adjacency">
+<code class="sig-name descname">get_adjacency</code><span class="sig-paren">(</span><em class="sig-param">entity_query={}</em>, <em class="sig-param">relation_query={}</em>, <em class="sig-param">relation_weight_fn=&lt;function Interface.&lt;lambda&gt;&gt;</em>, <em class="sig-param">ignore_relation_subtype=False</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_adjacency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a dictionary of adjacency matrices given queries for entities
+and relations. Optionally a function to extract a custom name
+can be provided. Similarly the weight can be accessed with a custom
+function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity_query</strong> (<em>dict</em>) – query for the entities. Defaults to {},
+a.k.a. all the entities.</p></li>
+<li><p><strong>relation_query</strong> (<em>dict</em>) – query for the relations. Defaults to {},
+a.k.a. all the relations.</p></li>
+<li><p><strong>relation_weight_fn</strong> (<em>typing.Callable</em><em>[</em><em>[</em><em>dict</em><em>]</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – function to extract the weight from a relation. Defaults to
+extract the ‘weight’ field.</p></li>
+<li><p><strong>ignore_relation_subtype</strong> (<em>bool</em><em>, </em><em>optional</em>) – ignore relation subtype
+information. Defaults to False, a.k.a. consider subtype.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>dictionary keyed by relation types and containing as value</dt><dd><p>a dictionary keyed by relation subtypes and containing as
+value a tuple of a scipy.sparse.coo_matrix representing the
+relation subtype-specific adjacency and a dataframe
+containing the index mappings.
+If ignore_relation_subtype is True the subtype dictionary
+contains only one key called ‘adjacency’ and the overlapping
+interactions between subtyped need to be handled by the user.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_all_entities">
+<code class="sig-name descname">get_all_entities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_all_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>an iterable of entities.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>typing.Iterable[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_all_relations">
+<code class="sig-name descname">get_all_relations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_all_relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>an iterable of relations.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>typing.Iterable[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_entities">
+<code class="sig-name descname">get_entities</code><span class="sig-paren">(</span><em class="sig-param">query</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> (<em>dict</em>) – query representation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an iterable of entities.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>typing.Iterable[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_entities_by_ids">
+<code class="sig-name descname">get_entities_by_ids</code><span class="sig-paren">(</span><em class="sig-param">ids</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_entities_by_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get entities by ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>an iterable of entities.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>typing.Iterable[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_entity_in_neighbors">
+<code class="sig-name descname">get_entity_in_neighbors</code><span class="sig-paren">(</span><em class="sig-param">entity_query</em>, <em class="sig-param">relation_query={}</em>, <em class="sig-param">relation_weight_fn=&lt;function Interface.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_entity_in_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get incoming neighbors from an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity_query</strong> (<em>dict</em>) – query for a single entity. In case of multiple
+hits, considers the first one.</p></li>
+<li><p><strong>relation_query</strong> (<em>dict</em>) – query for the relations. Defaults to {},
+a.k.a. all the relations.</p></li>
+<li><p><strong>relation_weight_fn</strong> (<em>typing.Callable</em><em>[</em><em>[</em><em>dict</em><em>]</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – function to extract the weight from a relation. Defaults to
+extract the ‘weight’ field.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of ids and weights.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>typing.List[typing.Tuple[str, float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_entity_out_neighbors">
+<code class="sig-name descname">get_entity_out_neighbors</code><span class="sig-paren">(</span><em class="sig-param">entity_query</em>, <em class="sig-param">relation_query={}</em>, <em class="sig-param">relation_weight_fn=&lt;function Interface.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_entity_out_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get outgoing neighbors from an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity_query</strong> (<em>dict</em>) – query for a single entity. In case of multiple
+hits, considers the first one.</p></li>
+<li><p><strong>relation_query</strong> (<em>dict</em>) – query for the relations. Defaults to {},
+a.k.a. all the relations.</p></li>
+<li><p><strong>relation_weight_fn</strong> (<em>typing.Callable</em><em>[</em><em>[</em><em>dict</em><em>]</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – function to extract the weight from a relation. Defaults to
+extract the ‘weight’ field.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of ids and weights.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>typing.List[typing.Tuple[str, float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_entity_types">
+<code class="sig-name descname">get_entity_types</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_entity_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get entity types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a list of entity types.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_relation_subtypes">
+<code class="sig-name descname">get_relation_subtypes</code><span class="sig-paren">(</span><em class="sig-param">relation_types=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_relation_subtypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get relation subtypes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relation_types</strong> (<em>list</em>) – relation types to consider. Defaults to
+None, a.k.a. all relation types.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>a dictionary of relation types mapped to the respective</dt><dd><p>subtypes.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_relation_types">
+<code class="sig-name descname">get_relation_types</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_relation_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get relation types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a list of relation types.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.interface.Interface.get_relations">
+<code class="sig-name descname">get_relations</code><span class="sig-paren">(</span><em class="sig-param">query</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.Interface.get_relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> (<em>dict</em>) – query representation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an iterable of relations.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>typing.Iterable[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="ipcrg.interfaces.interface.filter_relation">
+<code class="sig-prename descclassname">ipcrg.interfaces.interface.</code><code class="sig-name descname">filter_relation</code><span class="sig-paren">(</span><em class="sig-param">relation</em>, <em class="sig-param">relation_type</em>, <em class="sig-param">relation_subtype</em>, <em class="sig-param">entity_ids</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.filter_relation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to filter a relation for given: type, subtype and entitiy ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>relation</strong> (<em>dict</em>) – dictionary representing a relation.</p></li>
+<li><p><strong>relation_type</strong> (<em>str</em>) – relation type.</p></li>
+<li><p><strong>relation_subtype</strong> (<em>str</em>) – relation subtype.</p></li>
+<li><p><strong>entity_ids</strong> (<em>set</em>) – entitiy ids.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True is a relation match the filter, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="ipcrg.interfaces.interface.filter_relation_ignore_subtype">
+<code class="sig-prename descclassname">ipcrg.interfaces.interface.</code><code class="sig-name descname">filter_relation_ignore_subtype</code><span class="sig-paren">(</span><em class="sig-param">relation</em>, <em class="sig-param">relation_type</em>, <em class="sig-param">relation_subtype</em>, <em class="sig-param">entity_ids</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.interface.filter_relation_ignore_subtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to filter a relation for given: type and entitiy ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>relation</strong> (<em>dict</em>) – dictionary representing a relation.</p></li>
+<li><p><strong>relation_type</strong> (<em>str</em>) – relation type.</p></li>
+<li><p><strong>relation_subtype</strong> (<em>str</em>) – relation subtype. Argument ignored.</p></li>
+<li><p><strong>entity_ids</strong> (<em>set</em>) – entitiy ids.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True is a relation match the filter, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-ipcrg.interfaces.mongo">
+<span id="ipcrg-interfaces-mongo-module"></span><h2>ipcrg.interfaces.mongo module<a class="headerlink" href="#module-ipcrg.interfaces.mongo" title="Permalink to this headline">¶</a></h2>
+<p>MongoDB interface.</p>
+<dl class="class">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface">
+<em class="property">class </em><code class="sig-prename descclassname">ipcrg.interfaces.mongo.</code><code class="sig-name descname">MongoDBInterface</code><span class="sig-paren">(</span><em class="sig-param">uri</em>, <em class="sig-param">database_name</em>, <em class="sig-param">**parameters</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ipcrg.interfaces.interface.Interface" title="ipcrg.interfaces.interface.Interface"><code class="xref py py-class docutils literal notranslate"><span class="pre">ipcrg.interfaces.interface.Interface</span></code></a></p>
+<p>Mongo DB interface.</p>
+<dl class="attribute">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.client">
+<code class="sig-name descname">client</code><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.client" title="Permalink to this definition">¶</a></dt>
+<dd><p>a client for Mongo DB.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>MongoClient</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.entities_collection">
+<code class="sig-name descname">entities_collection</code><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.entities_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the entity collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.relations_collection">
+<code class="sig-name descname">relations_collection</code><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.relations_collection" title="Permalink to this definition">¶</a></dt>
+<dd><p>name of the relation collection.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.create_entities">
+<code class="sig-name descname">create_entities</code><span class="sig-paren">(</span><em class="sig-param">entities</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.create_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entities</strong> (<em>typing.List</em><em>[</em><em>dict</em><em>]</em>) – list of entity representations.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.create_entity">
+<code class="sig-name descname">create_entity</code><span class="sig-paren">(</span><em class="sig-param">entity</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.create_entity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>entity</strong> (<em>dict</em>) – entity representation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.create_indexes">
+<code class="sig-name descname">create_indexes</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.create_indexes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create search indexes.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.create_relation">
+<code class="sig-name descname">create_relation</code><span class="sig-paren">(</span><em class="sig-param">relation</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.create_relation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a relation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relation</strong> (<em>dict</em>) – relation representation.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.create_relations">
+<code class="sig-name descname">create_relations</code><span class="sig-paren">(</span><em class="sig-param">relations</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.create_relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relations</strong> (<em>typing.List</em><em>[</em><em>dict</em><em>]</em>) – list of relation representations.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.delete_all_entities">
+<code class="sig-name descname">delete_all_entities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.delete_all_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all entities.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.delete_all_relations">
+<code class="sig-name descname">delete_all_relations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.delete_all_relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Delete all relations.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.get_all_entities">
+<code class="sig-name descname">get_all_entities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.get_all_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get all entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>an iterable of entities.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>typing.Iterable[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.get_all_relations">
+<code class="sig-name descname">get_all_relations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.get_all_relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> (<em>dict</em>) – query representation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an iterable of relations.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>typing.Iterable[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.get_entities">
+<code class="sig-name descname">get_entities</code><span class="sig-paren">(</span><em class="sig-param">query</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.get_entities" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get entities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> (<em>dict</em>) – query representation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an iterable of entities.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>typing.Iterable[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.get_entities_by_ids">
+<code class="sig-name descname">get_entities_by_ids</code><span class="sig-paren">(</span><em class="sig-param">ids</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.get_entities_by_ids" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get entities by ids.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>an iterable of entities.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>typing.Iterable[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.get_entity_in_neighbors">
+<code class="sig-name descname">get_entity_in_neighbors</code><span class="sig-paren">(</span><em class="sig-param">entity_query</em>, <em class="sig-param">relation_query={}</em>, <em class="sig-param">relation_weight_fn=&lt;function MongoDBInterface.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.get_entity_in_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get incoming neighbors from an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity_query</strong> (<em>dict</em>) – query for a single entity. In case of multiple
+hits, considers the first one.</p></li>
+<li><p><strong>relation_query</strong> (<em>dict</em>) – query for the relations. Defaults to {},
+a.k.a. all the relations.</p></li>
+<li><p><strong>relation_weight_fn</strong> (<em>typing.Callable</em><em>[</em><em>[</em><em>dict</em><em>]</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – function to extract the weight from a relation. Defaults to
+extract the ‘weight’ field.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of ids and weights.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>typing.List[typing.Tuple[str, float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.get_entity_out_neighbors">
+<code class="sig-name descname">get_entity_out_neighbors</code><span class="sig-paren">(</span><em class="sig-param">entity_query</em>, <em class="sig-param">relation_query={}</em>, <em class="sig-param">relation_weight_fn=&lt;function MongoDBInterface.&lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.get_entity_out_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get outgoing neighbors from an entity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>entity_query</strong> (<em>dict</em>) – query for a single entity. In case of multiple
+hits, considers the first one.</p></li>
+<li><p><strong>relation_query</strong> (<em>dict</em>) – query for the relations. Defaults to {},
+a.k.a. all the relations.</p></li>
+<li><p><strong>relation_weight_fn</strong> (<em>typing.Callable</em><em>[</em><em>[</em><em>dict</em><em>]</em><em>, </em><em>float</em><em>]</em><em>, </em><em>optional</em>) – function to extract the weight from a relation. Defaults to
+extract the ‘weight’ field.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of ids and weights.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>typing.List[typing.Tuple[str, float]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.get_entity_types">
+<code class="sig-name descname">get_entity_types</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.get_entity_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get entity types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a list of entity types.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.get_relation_subtypes">
+<code class="sig-name descname">get_relation_subtypes</code><span class="sig-paren">(</span><em class="sig-param">relation_types=None</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.get_relation_subtypes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get relation subtypes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>relation_types</strong> (<em>list</em>) – relation types to consider. Defaults to
+None, a.k.a. all relation types.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><dl class="simple">
+<dt>a dictionary of relation types mapped to the respective</dt><dd><p>subtypes.</p>
+</dd>
+</dl>
+</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.get_relation_types">
+<code class="sig-name descname">get_relation_types</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.get_relation_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get relation types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a list of relation types.</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="ipcrg.interfaces.mongo.MongoDBInterface.get_relations">
+<code class="sig-name descname">get_relations</code><span class="sig-paren">(</span><em class="sig-param">query</em><span class="sig-paren">)</span><a class="headerlink" href="#ipcrg.interfaces.mongo.MongoDBInterface.get_relations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get relations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> (<em>dict</em>) – query representation.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an iterable of relations.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>typing.Iterable[dict]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-ipcrg.interfaces">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ipcrg.interfaces" title="Permalink to this headline">¶</a></h2>
+<p>Initilize interfaces module.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ipcrg.io.html" class="btn btn-neutral float-right" title="ipcrg.io package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ipcrg.entities.html" class="btn btn-neutral float-left" title="ipcrg.entities package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, iPC team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
