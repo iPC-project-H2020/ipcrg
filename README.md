@@ -1,6 +1,8 @@
 # iPC relational graph
 
-![ipc-logo](./docs/_static/logo.png | width=100)
+<p align="center">
+  <img src="./docs/_static/logo.png" alt="ipc-logo" width=500>
+</p>
 
 Package to organize relational graphs in the iPC projects.
 
